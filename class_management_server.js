@@ -39,7 +39,7 @@ app.get('/user', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send(`Server is running`);
+  res.send(`Server is up running`);
 });
 
 // Local dev: listen on PORT, but skip in Vercel
@@ -51,3 +51,4 @@ if (require.main === module) {
 }
 
 module.exports = app;
+
