@@ -46,8 +46,19 @@ app.get('/user', (res, req) => {
         res.status(201).json({message: `attendance for ${lastName} ${firstName} has been updated to ${status}`});
 
      }
+    
 });
 
-// app.listen(PORT, () => {
-//     console.log(`server was running away from http://localhost:${PORT}`);
+app.get('/user', (res, req) => {
+    res.status(200).json(users);
+});
+
+// app.get('/user', (res, req) => {
+//     res.send(`server was running away from http://localhost:${PORT}`);
 // });
+
+app.listen(PORT, () => {
+    console.log(`server was running away from http://localhost:${PORT}`);
+});
+
+module.exports = app;
